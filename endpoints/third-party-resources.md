@@ -49,7 +49,7 @@ Search term to reduce the number of results. Works for title or third\_party\_re
       "thumbnail_url": "https://link.to/thumbnail",
       "open_in_new_tab": true,
       "category": "Heading",
-      "tags": ["Special", "Publishers"]
+      "tags": ["Special", "Publishers", "REVERT"]
     }
   ]
 }
