@@ -63,5 +63,36 @@ Paginate the content
 }
 ```
 {% endswagger-response %}
+
+{% swagger baseUrl="https://[your-domain]" path="/api/v1/contents/:id" method="get" summary="View specific content" %}
+{% swagger-description %}
+This endpoint allows you to view a specific piece of content
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Your API token in the format Token token=\<token>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="id/slug" %}
+The id or slug of the content
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Contents successfully retrieved." %}
+```javascript
+{
+  "contents": {
+    "type": "Post",
+    "title": "Title",
+    "introduction": "Post description",
+    "url": "https://community.com/posts/2-post-title-2",
+    "canonical_url": "https://community.com/users/2-test-user/posts/2-post-title-2",
+    "thumbnail_url": null,
+    "published_at": "2019-08-28T11:28:42Z",
+    "created_at": "2019-08-28T11:30:42Z"
+  }
+}
+```
+{% endswagger-response %}
+
 {% endswagger %}
 
